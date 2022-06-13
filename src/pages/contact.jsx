@@ -25,7 +25,7 @@ export default function Contact() {
        }
 
   return (
-   
+   ///comentarioekeke
     <div className='contact-container'>
         
         <NavBar/>
