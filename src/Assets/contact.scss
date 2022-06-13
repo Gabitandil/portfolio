@@ -1,0 +1,65 @@
+.contact-container{
+    background-color: rgb(29, 29, 29);
+    height: 100vh;
+    width: 100%
+}
+.contact-container >h1{
+    position: fixed; 
+    top: 15%;
+    left: 45%;
+    color: rgba(255, 255, 255, 0.582);
+   cursor: default;
+   font-size: 3rem;
+   &:hover{
+       color: white;
+   }
+}
+.contact-video{
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    
+    z-index: -1;
+    filter: blur(1rem);
+}
+.contact-container >h2{
+    position: fixed; 
+    bottom: 25%;
+    left: 35%;
+    color: rgba(255, 255, 255, 0.582);
+   cursor: default;
+   font-size: 3rem;
+   &:hover{
+       color: white;
+   }
+}
+.contact-container > p{
+    position: fixed; 
+    bottom: 15%;
+    left: 20%;
+    color: rgba(255, 255, 255, 0.582);
+   cursor: default;
+   font-size: 3rem;
+   &:hover{
+       color: white;
+   }
+}
+.contact-icons-container{
+position: absolute;
+ display: flex;
+ left: 15%;
+ top: 30%;
+ justify-content: space-around;
+ 
+ height: 300px;
+ 
+}
+.github-icon{
+    
+    background-color: white;
+    border-radius: 30px;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}

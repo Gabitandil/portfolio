@@ -1,0 +1,141 @@
+.knowledge-container {
+
+    background-color: rgba(0, 0, 0, 0.863);
+    height: 100vh;
+    width: 100%
+}
+.knowledge-title{
+    position: fixed; 
+    top: 10%;
+    left: 40%;
+    color: rgba(255, 255, 255, 0.582);
+    cursor: default;
+    font-size: 3rem;
+    &:hover{
+        color: white;
+    }
+}
+.tech-container{
+    overflow: hidden;
+     position: relative;
+    display: flex;
+    justify-content: space-evenly ;
+    top: 19%;
+   
+    color: rgba(255, 255, 255, 0.582);
+    font-size: 2rem;
+    cursor: default;
+
+}
+.github{
+    background-color: white;
+    border-radius: 20px;
+}
+.js{
+    border-radius: 20px;
+}
+.mongoIcon{
+    height: 125px;
+    width: 6.1%;
+    border-radius: 20px;
+}
+.reduxIcon{
+    height: 125px;
+    width: 6.1%;
+    border-radius: 20px;
+    
+}
+.knowledge-projects{
+    position: fixed; 
+    top: 50%;
+    left: 40%;
+    color: rgba(255, 255, 255, 0.582);
+    cursor: default;
+    font-size: 2rem;
+   
+    
+}
+.knowledge-projects-title{
+&:hover{
+    color: white;
+    
+}
+}
+.market-photo {
+    position: fixed;
+   
+    top:60%;
+    left: 15%;
+    height: auto;
+    width: 25%;
+    border-radius: 20px;
+    &:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}
+
+
+
+.knowledge-video{
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    
+}
+.overlay {
+    position: fixed;
+    top:68%;
+    left: 22%;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    
+    
+  }
+  .knowledge-projects-container:hover .overlay {
+    opacity: 1;
+    
+    
+  }
+
+  
+  .dogs-photo{
+    position: fixed;
+    top:60%;
+    left: 62%;
+    height: auto;
+    width: 25%;
+    border-radius: 20px;
+    &:hover{
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}
+.dogs-api-container{
+    color: none;
+}
+.dogs{
+    position: fixed;
+    top:68%;
+    right: 16%;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    font-size: 2rem;
+}
+
+.dogs-api-container:hover .dogs{
+    opacity: 1;
+    cursor: pointer;
+}
