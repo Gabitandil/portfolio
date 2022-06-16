@@ -10,7 +10,7 @@ import React, {useState, useEffect} from "react";
 import NavBar from './componentes/navBar'
 import './Assets/App.scss'
 import Home from './pages/home'
-import About from './componentes/about'
+import About from './pages/about'
 import Knowledge from './pages/knowledge'
 import Contact from './pages/contact'
 function App() {

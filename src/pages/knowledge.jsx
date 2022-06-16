@@ -27,7 +27,7 @@ export default function Knowledge() {
       <div className='knowledge-container'>
         <video className='knowledge-video' src={starsVideo} autoPlay muted loop></video>
         <NavBar/>
-        <h1 className='knowledge-title'>TECNOLOGIAS</h1>
+        <h1 >TECNOLOGIAS</h1>
       
       <div className='tech-container'>
         
@@ -41,27 +41,13 @@ export default function Knowledge() {
          <img className='reduxIcon' src={reduxIcon} alt="" />
          </div>
       <div  className='knowledge-projects'>
-        <h1 className='knowledge-projects-title' >PROYECTOS</h1>
-        <div className='knowledge-projects-container'>
-        <div onClick={nftMarketVideo}>
-        <img  className="market-photo"src={nftMarket} alt="" />
-        <div className='overlay'>
-          <div >
-        <h3>NFT MARKET</h3>
-        <p>Video Demostracion</p>
+        <h1  >PROYECTOS</h1>
         </div>
+        <div className='image-container'>
+        <img className='image1' onClick={nftMarketVideo} src={nftMarket} alt="" />
+        <img className='image2' onClick={dogsApiVideo} src={dogsApi} alt="" />
         </div>
-        </div>
-        </div>
-      </div>
-      <div className='dogs-api-container' onClick={dogsApiVideo} >
-      <img className='dogs-photo' src={dogsApi} alt="" />
-      <div  className='dogs'>
-
-      <h3>DOGS API</h3>
-      <p>Video Demostracion</p>
-      </div>
-      </div>
+        
       </div>
 
 

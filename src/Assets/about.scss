@@ -1,5 +1,7 @@
+@use './base/globales' as v;
+@use "./base//mixins.scss" as  m;
 .about-container{
-    background-color: rgba(20, 20, 20, 0.664);
+    background-color: v.$background;
     height: 100vh;
     width: 100%
 }
@@ -13,14 +15,40 @@
     
   }
 .about-title{
-    position: fixed; 
-     top: 35%;
-     left: 45%;
-     color: rgba(255, 255, 255, 0.582);
-    cursor: default;
-    font-size: 2rem;
-    &:hover{
-        color: white;
+    @include m.telefono{
+       color:  v.$color_letra;
+       position: fixed; 
+        display: flex;
+        flex-direction: column;
+        top: 30%;
+        justify-content: center;
+        align-items: center;
+    }
+    @include m.desktop{
+      
+        position: fixed; 
+        display: flex;
+        flex-direction: column;
+        top: 40%;
+        justify-content: center;
+        align-items: center;
+        color: v.$color_letra;
+        font-size: 1.2rem;
+        h1{
+            font-size: 4rem;
+            &:hover{
+                color: white;
+                transform: scale(1.2);
+                cursor: default;
+            }
+          
+        }
+        h3{
+            &:hover{
+                color: white;
+                cursor: default;
+            }
+        }
     }
 }
 .about-info{
@@ -29,16 +57,24 @@
     left: 3%;
     font-size: 1.5rem;
     
-    color: rgba(255, 255, 255, 0.582);
+     color: v.$color_letra;
     cursor: default;
     &:hover{
         color: white;
     }
 }
 .about-btn-container{
-    position: fixed; /* or absolute */
-    top: 65%;
-    left:45%;
+    @include m.telefono{
+        position: fixed; 
+        top: 65%;
+        left:25%;
+    }
+    @include m.desktop{
+
+        position: fixed; 
+        top: 65%;
+        left:45%;
+    }
    
 
 }
