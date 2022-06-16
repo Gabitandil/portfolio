@@ -1,0 +1,13 @@
+@use "globales" as v;
+@mixin telefono {
+    @media  (min-width: v.$telefono) {
+      @content;
+    }
+  }
+
+  @mixin desktop {
+    @media (min-width: v.$desktop) {
+      @content;
+    }
+  }
+  

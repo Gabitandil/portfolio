@@ -5,13 +5,15 @@ import NavBar from '../componentes/navBar'
 
 export default function Home() {
   return (
-     <div>
+     <div className='container'>
       <NavBar/>
      
-    <div className='container' >
+    <div  >
+      <div className='text-container'>
       <video className='video' src = {VideoCover} autoPlay loop muted />
       <h1>Gabriel Moyano</h1>
       <h2>FullStack Web Developer</h2>
+      </div>
     </div>
     </div>
   )
