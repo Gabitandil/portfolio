@@ -129,7 +129,7 @@
 .knowledge-projects {
     @include m.telefono {
         position: fixed;
-        top: 69%;
+        top: 75%;
         left: 25%;
         color: v.$color_letra;
         &:hover{
@@ -185,7 +185,7 @@
     @include m.telefono{
         position: fixed;
         
-        top: 75%;
+        top: 85%;
         left: 5%;
         display: flex;
         gap: 20px;
