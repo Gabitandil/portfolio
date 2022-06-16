@@ -5,7 +5,9 @@
 
     background-color: v.$background;
     height: 100vh;
-    width: 100%
+    width: 100%;
+    overflow: hidden;
+    
 }
 
 
@@ -51,10 +53,13 @@
 .tech-container {
     @include m.telefono {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        position: relative;
+        grid-template-columns: repeat(4, 1fr);
+        position: fixed;
+        top: 30%;
+        img{
+            height: 80px;
 
-        top: 15%;
+        }
     }
 
     @include m.desktop {
@@ -66,6 +71,12 @@
         color: v.$color_letra;
 
         cursor: default;
+        img{
+            height: auto;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
 
     }
 
