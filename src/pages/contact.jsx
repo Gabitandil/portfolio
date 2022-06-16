@@ -29,10 +29,11 @@ export default function Contact() {
     <div className='contact-container'>
         
         <NavBar/>
+        <div className='contact-info'>
         <video className='contact-video' src={ContactVideo} autoPlay loop muted></video>
         <h1>MIS REDES</h1>
         <h2>OTROS MEDIOS DE CONTACTO</h2>
-        <p>telefono: +54 9 249 4512900 | email : gabitandil4@outlook</p>
+        <p>email : gabitandil4@outlook</p>
         {/* <p>correo: gabitandil4@outlook.com</p> */}
         <div className='contact-icons-container'>
         <img  className='github-icon' onClick={myLinkedin} src={linkedinIcon} alt="" />
@@ -40,7 +41,7 @@ export default function Contact() {
         <img onClick={myWhatsApp} className='github-icon' src={whatsappIcon} alt="" />
         
         </div>
-        
+        </div>
     </div>
   )
 }

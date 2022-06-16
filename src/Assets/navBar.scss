@@ -3,7 +3,7 @@
 .navbar{
     @include m.telefono{
       
-        position: fixed;
+        position: absolute;
       
     }
     @include m.desktop{
@@ -11,7 +11,7 @@
         position: fixed;
         display: inline-block;
         top: 50;
-        background-color: transparent;
+        background-color: rgba(0, 0, 0, 0.404);
         width: 100%;
         height: 80px;
         font-size: 25px;
