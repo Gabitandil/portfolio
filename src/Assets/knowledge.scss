@@ -172,6 +172,9 @@
             color: white;
         }
     }
+    @include m.desktopxl{
+       
+    }
 
 
 
@@ -206,6 +209,17 @@
             border-radius: 20px;
         }
     }
+    @include m.tablet{
+        position: fixed;
+        top: 65%;
+        left: 15%;
+        display: flex;
+        gap: 100px;
+        img{
+            width: 150px;
+            border-radius: 20px;
+        }
+    }
     @include m.desktop{
         position: fixed;
         top: 65%;
@@ -228,6 +242,17 @@
             &:hover{
                 transform: scale(1.2);
                 cursor: pointer;
+            }
+        }
+        @include m.desktopxl{
+            position: fixed;
+            top: 65%;
+            left: 15%;
+            display: flex;
+            gap: 100px;
+            img{
+                width: 450px;
+                border-radius: 20px;
             }
         }
        

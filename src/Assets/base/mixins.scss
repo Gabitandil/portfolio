@@ -10,4 +10,15 @@
       @content;
     }
   }
+
+  @mixin desktopxl {
+    @media (min-width: v.$desktopxl) {
+      @content;
+    }
+  }
   
+  @mixin tablet {
+    @media (min-width: v.$tablet) {
+      @content;
+    }
+  }
