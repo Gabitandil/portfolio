@@ -2,11 +2,27 @@
 @use "./base//mixins.scss" as m;
 
 .knowledge-container {
-
-    background-color: v.$background;
+    @include m.telefono{
+        background-color: rgba(0, 0, 0, 0.411);
+        
+        
+        height: 100vh;
+        width: 100%;
+     
+        
+    }
+ @include m.desktop{
+    background-color: rgba(0, 0, 0, 0.411);
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    h1{
+        background-color: rgba(0, 0, 0, 0.568);
+        height: 100px;
+    }
+  
+ }
+  
     
 }
 
@@ -21,10 +37,14 @@
         justify-content: center;
         align-items: center;
         font-size: 3rem;
-
+        position: relative;
+        
+        top:25%;
+       
         &:hover {
             color: white;
             cursor: default;
+            
 
         }
     }
@@ -44,7 +64,7 @@
         &:hover {
             color: white;
             cursor: default;
-
+            
         }
     }
 
@@ -53,131 +73,30 @@
 .tech-container {
     @include m.telefono {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        position: fixed;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
         top: 30%;
-        img{
-            height: 80px;
-
-        }
+        height: 200px;
+        background-color: none;
+       
     }
 
     @include m.desktop {
         overflow: hidden;
         position: relative;
-        display: flex;
-        justify-content: space-evenly;
-        top: 19%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+       
+        top: 30%;
         color: v.$color_letra;
-
-        cursor: default;
-        img{
-            height: auto;
-            &:hover{
-                transform: scale(1.1);
-            }
-        }
-
-    }
-
-}
-
-.github {
-    @include m.telefono {
-        height: 100%;
-        width: 88%;
-        background-color: white;
-        border-radius: 20px;
-
-        left: 9%;
-
-
-    }
-
-    @include m.desktop {
-        background-color: white;
-        border-radius: 20px;
-        width: 6%;
-    }
-
-}
-
-.js {
-    border-radius: 20px;
-}
-
-.mongoIcon {
-    @include m.telefono {
-        height: 125px;
-        width: 90%;
-        border-radius: 20px;
-    }
-
-    @include m.desktop {
-        height: 125px;
-        width: 6.1%;
-        border-radius: 20px;
-    }
-}
-
-
-.reduxIcon {
-    @include m.telefono {
-        height: 125px;
-        width: 90%;
-        border-radius: 20px;
-    }
-
-    @include m.desktop {
-        height: 125px;
-        width: 6.1%;
-        border-radius: 20px;
-    }
-
-
-}
-
-.knowledge-projects {
-    @include m.telefono {
-        position: fixed;
-        top: 75%;
-        left: 25%;
-        color: v.$color_letra;
+        background-color: rgba(0, 0, 0, 0.568);
+        height: 400px;
         &:hover{
-            color: white;
+            cursor: default;
         }
+       
+
     }
-
-    @include m.desktop {
-       
-        img{
-            
-            width: 450px;
-            &:hover{
-                transform: scale(1.2);
-            }
-
-        }
-        position: fixed;
-        top: 55%;
-        left: 40%;
-       
-       
-     
-        color: v.$color_letra;
-        cursor: default;
-        font-size: 2rem;
-
-        &:hover {
-            color: white;
-        }
-    }
-    @include m.desktopxl{
-       
-    }
-
-
-
 
 }
 
@@ -186,77 +105,59 @@
 
 
 
-.knowledge-video {
-    object-fit: cover;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    z-index: -1;
 
-}
 
-.image-container{
+
+
+
+
+
+
+
+
+.knowledge-background {
     @include m.telefono{
-        position: fixed;
-        
-        top: 85%;
-        left: 5%;
-        display: flex;
-        gap: 20px;
-        overflow: hidden;
-        img{
-            width: 150px;
-            border-radius: 20px;
-        }
-    }
-    @include m.tablet{
-        position: fixed;
-        top: 65%;
-        left: 15%;
-        display: flex;
-        gap: 100px;
-        img{
-            width: 150px;
-            border-radius: 20px;
-        }
+        object-fit: cover;
+        width: 100%;
+        height: 155vh;
+        position: absolute;
+        z-index: -1;
     }
     @include m.desktop{
-        position: fixed;
-        top: 65%;
-        left: 20%;
-        display: flex;
-        gap: 100px;
-        
-        
-        img{
-            width: 600px;
-            border-radius: 20px;
-        }
-        .image1{
-            &:hover{
-                transform: scale(1.2);
-                cursor: pointer;
-            }
-        }
-        .image2{
-            &:hover{
-                transform: scale(1.2);
-                cursor: pointer;
-            }
-        }
-        @include m.desktopxl{
-            position: fixed;
-            top: 65%;
-            left: 15%;
-            display: flex;
-            gap: 100px;
-            img{
-                width: 450px;
-                border-radius: 20px;
-            }
-        }
-       
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
     }
- 
+    @include m.desktopxl{
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
+    }
+  
+
 }
 
+
+.github-icon{
+ height: 110px;
+ width: auto;
+ color: black;
+ border-radius: 120px;
+   
+}
+.icon-text{
+    
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+   p{
+    &:hover{
+        color: rgb(194, 127, 3);
+    }
+   }
+
+}

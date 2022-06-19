@@ -1,11 +1,6 @@
 import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
- 
-} from "react-router-dom";
-
+  BrowserRouter as Router } from "react-router-dom";
+import AnimatedRoutes from "./animatedRoutes";
 import React, {useState, useEffect} from "react";
 import NavBar from './componentes/navBar'
 import './Assets/App.scss'
@@ -22,13 +17,10 @@ function App() {
     <div>
       
       <Router>
-      <Routes>
+      
         
-        <Route exact path="/" element={<Home/>} />
-        <Route path ='/about' element={<About/>} />
-        <Route path ='/knowledge' element={<Knowledge/>} />
-        <Route path ='/contact' element ={<Contact/>} />
-        </Routes>
+        <AnimatedRoutes/>
+        
         </Router>
       
       

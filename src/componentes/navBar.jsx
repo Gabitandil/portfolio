@@ -10,7 +10,8 @@ function navBar() {
                
             <Link  to ='/' style={{ textDecoration: 'none' }} > <p className='opt-container'>INICIO</p> </Link>
             <Link to ='/about' style={{ textDecoration: 'none' }} > <p className='opt-container'>SOBRE MI </p>  </Link>
-            <Link to ='/knowledge' ><p className='opt-container' >CONOCIMIENTO</p></Link>
+            <Link to ='/knowledge' ><p className='opt-container' >TECNOLOGIAS</p></Link>
+            <Link to ='/projects' ><p className='opt-container' >PROYECTOS</p></Link>
             <Link to ='/contact' ><p className='opt-container' >CONTACTO</p></Link>
           
             

@@ -1,7 +1,7 @@
 @use './base/globales' as v;
 @use "./base//mixins.scss" as  m;
 .about-container{
-    background-color: v.$background;
+    background-color: rgba(0, 0, 0, 0.411);
     height: 100vh;
     width: 100%
 }
@@ -23,17 +23,29 @@
         top: 15%;
         justify-content: center;
         align-items: center;
+        background-color: rgba(0, 0, 0, 0.568);
+        height: 300px;
+        h3{
+            color: white;
+            text-align: center;
+            cursor: default;
+            font-weight: 150;
+        }
     }
+    
     @include m.desktop{
       
+        color:  v.$color_letra;
         position: fixed; 
-        display: flex;
-        flex-direction: column;
-        top: 40%;
-        justify-content: center;
-        align-items: center;
-        color: v.$color_letra;
-        font-size: 1.2rem;
+         display: flex;
+         flex-direction: column;
+         top: 15%;
+         left: 2%;
+         justify-content: center;
+         align-items: center;
+         background-color: rgba(0, 0, 0, 0.568);
+         height: 500px;
+         width: auto;
         h1{
             font-size: 4rem;
             &:hover{
@@ -44,11 +56,37 @@
           
         }
         h3{
-            &:hover{
-                color: white;
-                cursor: default;
-            }
+            color: white;
+            font-weight: 150;
+            cursor: default;
+            line-height: 1.4;
+            text-shadow: 2px 2px 5px black;
+            width: 850px;
         }
+    }
+    @include m.desktopxl{
+       
+            color:  v.$color_letra;
+            position: fixed; 
+             display: flex;
+             flex-direction: column;
+             top: 15%;
+             left: 30%;
+             justify-content: center;
+             align-items: center;
+             background-color: rgba(0, 0, 0, 0.568);
+             height: 400px;
+             h3{
+                
+                color: white;
+                font-weight: 150;
+                cursor: default;
+                line-height: 1.4;
+                text-shadow: 2px 2px 5px black;
+                width: 850px;
+                
+             }
+         
     }
 }
 .about-info{

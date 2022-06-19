@@ -1,0 +1,190 @@
+@use "./base/globales" as v;
+@use './base//mixins.scss' as m;
+
+.project-container {
+    @include m.telefono {
+        background-color: rgba(0, 0, 0, 0.411);
+        height: 100vh;
+        width: 100%;
+
+        h1 {
+            color: v.$color_letra;
+            position: fixed;
+            display: flex;
+            top: 15%;
+            left: 35%;
+            text-align: center;
+            justify-content: center;
+
+            &:hover {
+                color: white;
+                transform: scale(1.2);
+            }
+
+        }
+    }
+
+    @include m.desktop {
+        background-color: rgba(0, 0, 0, 0.411);
+        height: 100vh;
+        width: 100%;
+
+        h1 {
+            color: v.$color_letra;
+            position: fixed;
+            display: flex;
+            top: 15%;
+            left: 42%;
+            text-align: center;
+            justify-content: center;
+            font-size: 3.5rem;
+
+            &:hover {
+                color: white;
+                transform: scale(1.2);
+            }
+
+        }
+    }
+
+    @include m.desktopxl {
+        background-color: rgba(0, 0, 0, 0.411);
+        height: 100vh;
+        width: 100%;
+    }
+
+}
+
+.project-background {
+    @include m.desktop {
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
+    }
+
+    @include m.desktopxl {
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
+    }
+
+}
+
+.projects-container {
+    @include m.telefono{
+       
+       
+       
+      
+       
+       
+        img {
+           position: fixed;
+            top: 10%;
+            height: 100px;
+            width: auto;
+            
+    
+          
+        }
+    }
+    @include m.desktop{
+        position: fixed;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    align-items: center;
+    top: 30%;
+    left: 15%;
+
+    img {
+        position: static;
+        height: 350px;
+        width: auto;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    }
+    @include m.desktopxl{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+        align-items: center;
+        top: 30%;
+        left: 15%;
+    
+        img {
+            height: 350px;
+            width: auto;
+    
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+   
+}
+
+.project-text {
+    @include m.telefono{}
+    @include m.desktop{
+        h3 {
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    
+        p {
+    
+            color: white;
+            font-size: 1rem;
+    
+    
+            font-weight: 150;
+            cursor: default;
+            line-height: 1.4;
+            text-shadow: 2px 2px 5px black;
+            height: 550px;
+            width: 690px;
+        }
+    
+        height: 550px;
+        background-color: rgba(0, 0, 0, 0.404);
+    }
+    @include m.desktopxl{
+        h3 {
+            text-align: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    
+        p {
+    
+            color: white;
+            font-size: 1rem;
+    
+    
+            font-weight: 150;
+            cursor: default;
+            line-height: 1.4;
+            text-shadow: 2px 2px 5px black;
+            height: 550px;
+            width: 690px;
+        }
+    
+        height: 550px;
+        background-color: rgba(0, 0, 0, 0.404);
+    }
+   
+    
+
+}

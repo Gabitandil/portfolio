@@ -2,7 +2,7 @@
 @use "./base//mixins.scss" as m;
 
 .contact-container {
-    background-color: rgba(0, 0, 0, 0.404);
+    background-color: rgba(0, 0, 0, 0.411);
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -58,7 +58,7 @@
         h1 {
             position: fixed;
             top: 15%;
-            left: 45%;
+            left: 40%;
             color: v.$color_letra;
             cursor: default;
             font-size: 3rem;
@@ -94,14 +94,16 @@
             }
         }
     }
+    
 }
 
-.contact-video {
+.contact-background {
     @include m.telefono {
         object-fit: cover;
         width: 100%;
         height: 100vh;
-        
+        position: absolute;
+        z-index: -1;
         
 
     }
@@ -110,9 +112,16 @@
         object-fit: cover;
         width: 100%;
         height: 100vh;
-
+        position: absolute;
         z-index: -1;
-        filter: blur(1rem);
+        
+    }
+    @include m.desktopxl {
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        z-index: -1;
     }
 
 }
@@ -169,7 +178,7 @@
         display: flex;
         justify-content: center;
         
-        left: 5%;
+        left:40%;
         top: 40%;
         
         border-radius: 20px;

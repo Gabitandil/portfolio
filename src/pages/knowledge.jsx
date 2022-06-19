@@ -9,46 +9,68 @@ import nodeIcon from '../media/icons/nodejs.png'
 import gitHubIcon from '../media/icons/github(2).png'
 import mongoIcon from '../media/icons/mongodb.png'
 import reduxIcon from '../media/icons/redux.jpg'
-import nftMarket from '../media/icons/nftmarket.png'
-import starsVideo from '../media/stars.mp4'
-import dogsApi from '../media/icons/dogsapi.png'
+
+
+
+import Background from '../media/background.jpg'
+import { motion } from 'framer-motion'
+import {AiFillGithub} from 'react-icons/ai'
+
+
 export default function Knowledge() {
-    const [hover, setHover] = useState(false)
     
-    function nftMarketVideo(){
-      const nftMarketUrl = "https://www.linkedin.com/feed/update/urn:li:activity:6938915334397530112/"
-      window.open(nftMarketUrl)
-    }
-    function dogsApiVideo(){
-      const dogsVideo = "https://www.linkedin.com/feed/update/urn:li:activity:6929180569830318080/"
-      window.open(dogsVideo)
-    }
+    
+  
   return (
-      <div className='knowledge-container'>
-        <video className='knowledge-video' src={starsVideo} autoPlay muted loop></video>
+      <motion.div className='knowledge-container'
+      initial={{ opacity: 0.5 }}
+      animate={{ y: 0, opacity: 1, scale: 1 }}
+      exit={{ opacity: 0.2 }}
+      >
+        <img className='knowledge-background' src={Background} alt="" />
         <NavBar/>
         <h1 >TECNOLOGIAS</h1>
-      
+        
       <div className='tech-container'>
-        
-         <img  src={reactIcon} alt="" />
-         <img  src={cssIcon} alt="" />
-         <img src={htmlIcon} alt="" />
-         <img className='js' src={jsIcon} alt="" />
-         <img src={nodeIcon} alt="" />
-         <img className='github' src={gitHubIcon} alt="" />
-         <img className='mongoIcon' src={mongoIcon} alt="" />
-         <img className='reduxIcon' src={reduxIcon} alt="" />
+        <div className='icon-text'>
+        <img className='github-icon' src={gitHubIcon} alt="" />
+        <p>Github</p>
+        </div>
+        <div className='icon-text'>
+        <img className='github-icon' src={nodeIcon} alt="" />
+        <p>nodeJs</p>
+        </div>
+        <div className='icon-text'>
+        <img className='github-icon' src={reactIcon} alt="" />
+        <p>React</p>
+        </div>
+        <div className='icon-text'>
+        <img className='github-icon' src={mongoIcon} alt="" />
+        <p>mongoDB</p>
+        </div>
+        <div className='icon-text'>
+        <img className='github-icon' src={reduxIcon} alt="" />
+        <p>Redux</p>
+        </div>
+        <div className='icon-text'>
+        <img className='github-icon' src={jsIcon} alt="" />
+        <p>Javascript</p>
+        </div>
+        <div className='icon-text'>
+        <img className='github-icon' src={cssIcon} alt="" />
+        <p>CSS</p>
+        </div>
+        <div className='icon-text'>
+        <img className='github-icon' src={htmlIcon} alt="" />
+        <p>HTML</p>
+        </div>
+
+
+
          </div>
-      <div  className='knowledge-projects'>
-        <h1  >PROYECTOS</h1>
-        </div>
-        <div className='image-container'>
-        <img className='image1' onClick={nftMarketVideo} src={nftMarket} alt="" />
-        <img className='image2' onClick={dogsApiVideo} src={dogsApi} alt="" />
-        </div>
+     
         
-      </div>
+      </motion.div>
 
 
 

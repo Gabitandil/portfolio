@@ -5,6 +5,8 @@ import linkedinIcon from '../media/icons/linkedin.png'
 import githubIcon from '../media/icons/github(3).png'
 import whatsappIcon from '../media/icons/whatsapp.png'
 import ContactVideo from '../media/contactvideo.mp4'
+import Background from '../media/background.jpg'
+import { motion } from 'framer-motion'
 export default function Contact() {
 
     function myLinkedin(){
@@ -26,11 +28,15 @@ export default function Contact() {
 
   return (
    ///comentarioekeke
-    <div className='contact-container'>
+    <motion.div className='contact-container'
+    initial={{ opacity: 0.5 }}
+    animate={{ y: 0, opacity: 1, scale: 1 }}
+    exit={{ opacity: 0.2 }}
+    >
         
         <NavBar/>
         <div className='contact-info'>
-        <video className='contact-video' src={ContactVideo} autoPlay loop muted></video>
+       <img className='contact-background' src={Background} alt="" />
         <h1>MIS REDES</h1>
         <h2>OTROS MEDIOS DE CONTACTO</h2>
         <p>email : gabitandil4@outlook</p>
@@ -42,6 +48,6 @@ export default function Contact() {
         
         </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
