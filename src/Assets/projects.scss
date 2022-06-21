@@ -6,13 +6,14 @@
         background-color: rgba(0, 0, 0, 0.411);
         height: 100vh;
         width: 100%;
+       overflow: hidden;
 
         h1 {
             color: v.$color_letra;
             position: fixed;
             display: flex;
-            top: 15%;
-            left: 35%;
+            top: 25%;
+            left: 19%;
             text-align: center;
             justify-content: center;
 
@@ -22,6 +23,7 @@
             }
 
         }
+     
     }
 
     @include m.desktop {
@@ -77,14 +79,16 @@
 .projects-container {
     @include m.telefono{
        
-       
-       
-      
-       
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        position: relative;
+        
        
         img {
+           
            position: fixed;
-            top: 10%;
+            top: 35%;
             height: 100px;
             width: auto;
             
@@ -107,7 +111,7 @@
         width: auto;
 
         &:hover {
-            transform: scale(1.1);
+            cursor: pointer;
         }
     }
     }
@@ -123,9 +127,15 @@
         img {
             height: 350px;
             width: auto;
+            transition: transform .2s;
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr);
+            object-fit: contain;
     
             &:hover {
+                cursor: pointer;
                 transform: scale(1.1);
+                
             }
         }
     }
@@ -133,9 +143,35 @@
 }
 
 .project-text {
-    @include m.telefono{}
-    @include m.desktop{
+    @include m.telefono{
         h3 {
+            position: fixed;
+            top: 46%;
+            text-align: center;
+            color: white;
+           
+            font-weight: bold;
+        }
+        p {
+    
+            color: white;
+            height: auto;
+            position: fixed;
+            width: 180px;
+            top: 49%;
+            font-weight: 150;
+            cursor: default;
+            line-height: 1.4;
+            text-shadow: 2px 2px 5px black;
+            
+        }
+
+    }
+    @include m.desktop{
+    
+        h3 {
+            position: relative;
+            top: 2%;
             text-align: center;
             color: white;
             font-size: 2rem;
@@ -143,7 +179,8 @@
         }
     
         p {
-    
+            position: relative;
+            top:5%;
             color: white;
             font-size: 1rem;
     
