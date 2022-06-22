@@ -2,7 +2,7 @@
 @use "./base//mixins.scss" as m;
 
 .contact-container {
-    background-color: rgba(0, 0, 0, 0.411);
+    background-color: rgba(0, 0, 0, 0.233);
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -10,89 +10,39 @@
    
 }
 
-.contact-info {
+.contact-container{
     @include m.telefono {
         h1 {
             position: fixed;
-            top: 30%;
-            left: 25%;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.404);
+            top: 18%;
+            left: 45%;
+            color: v.$color_letra;
             cursor: default;
-            font-size: 2rem;
-
+            font-size: 3rem;
+            
             &:hover {
                 color: white;
-            }
-        }
-        h2 {
-            position: fixed;
-            bottom: 25%;
-            left: 0%;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.404);
-            cursor: default;
-            font-size: 2rem;
-
-            &:hover {
-                color: white;
-            }
-        }
-        p {
-            position: fixed;
-            bottom: 15%;
-            left: 20%;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.404);
-            cursor: default;
-            font-size: 1.1rem;
-
-            &:hover {
-                transform: scale(1.2);
             }
         }
      
     }
 
     @include m.desktop {
+       
         h1 {
             position: fixed;
-            top: 15%;
-            left: 40%;
+            top: 18%;
+            left: 45%;
             color: v.$color_letra;
             cursor: default;
             font-size: 3rem;
-
+            
             &:hover {
                 color: white;
             }
         }
 
-        h2 {
-            position: fixed;
-            bottom: 25%;
-            left: 35%;
-            color: rgba(255, 255, 255, 0.582);
-            cursor: default;
-            font-size: 3rem;
-
-            &:hover {
-                color: white;
-            }
-        }
-
-        p {
-            position: fixed;
-            bottom: 10%;
-            left: 35%;
-            color: rgba(255, 255, 255, 0.582);
-            cursor: default;
-            font-size: 3rem;
-
-            &:hover {
-                color: white;
-            }
-        }
+       
     }
     
 }
@@ -126,75 +76,66 @@
 
 }
 
-// .contact-container > p{
-//     position: fixed; 
-//     bottom: 15%;
-//     left: 20%;
-//     color: rgba(255, 255, 255, 0.582);
-//    cursor: default;
-//    font-size: 3rem;
-//    &:hover{
-//        color: white;
-//    }
-// }
-.contact-icons-container {
-    @include m.telefono {
-        position: fixed;
-        display: flex;
-        left: 20%;
-        top: 40%;
-        gap: 20px;
-        border-radius: 20px;
-        height: 60px;
-    }
-    @include m.tablet{
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        
-        left: 5%;
-        top: 40%;
-        
-        border-radius: 20px;
-        height: 60px;
-    }
-
-    @include m.desktop {
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        
-        left: -50%;
-        top: 40%;
-        
-        border-radius: 20px;
-        height: 60px;
-        
-        border-radius: 20px;
-        
-    }
-    @include m.desktopxl {
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        
-        left:40%;
-        top: 40%;
-        
-        border-radius: 20px;
-        height: 60px;
-    }
 
 
+
+.info-container{
+    @include m.telefono{
+    
+        img{
+            height: 35px;
+            
+        }
+    }
+
+    @include m.desktop{
+        align-items: center;
+        
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+        
+        top: 30%;
+        background-color: rgba(0, 0, 0, 0.411);
+        padding: 20px;
+        border-radius: 35px;
+        &:hover{
+            background-color: white;
+            cursor: pointer;
+            transform: scale(1.2);
+            p{
+                color: black;
+            }
+        }
+        
+        p{
+            color: v.$color_letra;
+            text-align: center;
+            font-size: 1.5rem;
+           
+        }
+        img{
+            height: 70px;
+            
+        }
+    }
 }
+.contact-info{
+    @include m.telefono{
+        position: relative;
+        top: 45%;
+        left: 25%;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        
+    }
 
-.github-icon {
-
-    background-color: white;
-    border-radius: 30px;
-
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
+    @include m.desktop{
+        position: relative;
+        top: 40%;
+       left: 17%;
+        display: grid;
+        grid-template-columns: repeat(3,550px);
     }
 }

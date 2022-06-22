@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from '../componentes/navBar'
 import '../Assets/contact.scss'
-import linkedinIcon from '../media/icons/linkedin.png'
+import linkedinIcon from '../media/icons/linkedin(1).png'
 import githubIcon from '../media/icons/github(3).png'
 import whatsappIcon from '../media/icons/whatsapp.png'
 import ContactVideo from '../media/contactvideo.mp4'
@@ -35,19 +35,24 @@ export default function Contact() {
     >
         
         <NavBar/>
-        <div className='contact-info'>
+        <div className='contact-container'>
        <img className='contact-background' src={Background} alt="" />
+            <div className='contact-info'>
         <h1>MIS REDES</h1>
-        <h2>OTROS MEDIOS DE CONTACTO</h2>
-        <p>email : gabitandil4@outlook</p>
-        {/* <p>correo: gabitandil4@outlook.com</p> */}
-        <div className='contact-icons-container'>
-        <img  className='github-icon' onClick={myLinkedin} src={linkedinIcon} alt="" />
-        <img onClick={myGitHub} className='github-icon' src={githubIcon} alt="" />
-        <img onClick={myWhatsApp} className='github-icon' src={whatsappIcon} alt="" />
-        
+        <div onClick={myWhatsApp} className='info-container'>
+            <img  src={whatsappIcon} alt="" srcset="" />
+            <p>Whatsapp</p>
+        </div>
+        <div onClick={myGitHub} className='info-container'>
+            <img className='github-icon' src={githubIcon} alt="" srcset="" />
+            <p>Github</p>
+        </div>
+        <div onClick={myLinkedin} className='info-container'>
+            <img  src={linkedinIcon} alt="" srcset="" />
+            <p>Linkedin</p>
         </div>
         </div>
+     </div>
     </motion.div>
   )
 }
