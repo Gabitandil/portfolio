@@ -38,7 +38,7 @@ export default function Contact() {
         <div className='contact-container'>
        <img className='contact-background' src={Background} alt="" />
             <div className='contact-info'>
-        <h1>MIS REDES</h1>
+        <h1>Contactame!</h1>
         <div onClick={myWhatsApp} className='info-container'>
             <img  src={whatsappIcon} alt="" srcset="" />
             <p>Whatsapp</p>

@@ -18,10 +18,11 @@
             left: 45%;
             color: v.$color_letra;
             cursor: default;
-            font-size: 3rem;
+            font-size: 2.5rem;
             
             &:hover {
                 color: white;
+                
             }
         }
      
@@ -32,13 +33,15 @@
         h1 {
             position: fixed;
             top: 18%;
-            left: 45%;
+            left: 40%;
             color: v.$color_letra;
             cursor: default;
-            font-size: 3rem;
+            font-size: 4rem;
+          
             
             &:hover {
                 color: white;
+                transform: scale(1.2);
             }
         }
 
@@ -86,16 +89,19 @@
             height: 35px;
             
         }
+   
+        
     }
 
     @include m.desktop{
         align-items: center;
-        
+        position: relative;
         display: flex;
         flex-direction: row;
-        width: 350px;
-        
-        top: 30%;
+        width: 400px;
+        height: 150px;
+        right: 20%;
+        top: 40%;
         background-color: rgba(0, 0, 0, 0.411);
         padding: 20px;
         border-radius: 35px;
@@ -128,6 +134,11 @@
         display: flex;
         flex-direction: row;
         gap: 30px;
+        h1{
+            position: fixed;
+            top: 20%;
+            left: 40%; 
+        }
         
     }
 
