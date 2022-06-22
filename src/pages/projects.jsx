@@ -27,7 +27,7 @@ export default function Projects() {
         <img className='project-background' src={Background} alt="" />
         <div className='projects-container'>
           <div className='project-text'>
-        <img onClick={nftMarketVideo} src={nftMarket} alt="" />
+        <img className='fotonftmarket' onClick={nftMarketVideo} src={nftMarket} alt="" />
         <h3>nft market</h3>
         <p>Exchange de NFT con tradeos, perfil de usuario, transferencias, chat, plataforma de pago Mercado Pago, historial de compras/ventas, notificaciones por correo electronico, búsquedas por parámetros, sistema de popularidad en activos y en usuarios, filtrados por categorías, ordenamientos y creación de nuevos activos.
           desarrollada con : React, Redux, SCSS y Back-End desarrollado en Node.js con Express. Base de datos en mongoDB y Sequelize.

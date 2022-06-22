@@ -1,6 +1,7 @@
 @use "./base/globales" as v;
 @use './base//mixins.scss' as m;
 
+
 .project-container {
     @include m.telefono {
         background-color: rgba(0, 0, 0, 0.411);
@@ -83,7 +84,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
         position: relative;
-        
+        width: auto;
        
         img {
            
@@ -108,7 +109,7 @@
     img {
         position: static;
         height: 350px;
-        width: auto;
+        
 
         &:hover {
             cursor: pointer;
@@ -127,12 +128,12 @@
         
     
         img {
-            height: 350px;
-            width: auto;
-            transition: transform .2s;
-            display: grid; 
-            grid-template-columns: repeat(2, 1fr);
-            object-fit: contain;
+            
+           
+            position: static;
+             height: 350px;
+            
+           
     
             &:hover {
                 cursor: pointer;
@@ -140,17 +141,21 @@
                 
             }
         }
+        
     }
    
 }
 
 .project-text {
+    
+   
     @include m.telefono{
         h3 {
             position: fixed;
             top: 46%;
-            text-align: center;
+            text-align:center;
             color: white;
+            justify-content: center;
             
             
             font-weight: bold;
@@ -171,14 +176,13 @@
 
     }
     @include m.desktop{
-    
+    width: 700px;
         h3 {
             position: relative;
             top: 2%;
+            
             text-align: center;
-            color: white;
-            font-size: 2rem;
-            font-weight: bold;
+            justify-content: center;
         }
     
         p {
@@ -197,10 +201,10 @@
         }
     
         height: 550px;
-        background-color: rgba(0, 0, 0, 0.404);
+    
     }
     @include m.desktopxl{
-       
+        
         
         h3 {
             text-align: center;
@@ -223,10 +227,15 @@
             width: 690px;
         }
     
-        height: 550px;
-        background-color: rgba(0, 0, 0, 0.404);
+       
+        
+        
     }
    
     
 
+}
+
+.fotonftmarket{
+    color: red;
 }
